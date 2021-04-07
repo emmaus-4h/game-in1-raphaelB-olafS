@@ -9,9 +9,14 @@ Gemaakt door:
 
 Basis: uitleg, spelen, afgaan en punten
 - [ ] maak index.html, style.css en script.js met canvas
-- [ ] teken wereld
 - [ ] teken speler
 - [ ] beweeg speler
+- [ ] teken wereld
+- [ ] teken tegenstanders
+- [ ] laat tegenstander bewegende
+- [ ] geef elke seconde 1 punten
+- [ ] detecteer als speler en tegenstander botst
+- [ ] game over als botsing
 - [ ] ... *(vul zelf aan)*
 - [ ] punten op scherm zetten
 - [ ] punten kunnen scoren
