@@ -21,6 +21,7 @@ Basis: uitleg, spelen, afgaan en punten
 - [ ] punten op scherm zetten
 - [ ] punten kunnen scoren
 - [ ] uitlegscherm
+- [ ] GEE laten zien
 
 Uitbreiding: *bedenk iets, bijvoorbeeld meer tegenstanders*
 - [ ] *later uitwerken*
