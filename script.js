@@ -46,7 +46,7 @@ var score = 0; // aantal behaalde punten
  * Tekent het speelveld
  */
 var tekenVeld = function () {
-  fill("red");
+  fill(255,220,86);
   rect(20, 20, width - 2 * 20, height - 2 * 20);
 };
 
@@ -57,8 +57,7 @@ var tekenVeld = function () {
  * @param {number} y y-coördinaat
  */
 var tekenVijand = function(x, y) {
-    fill("white");
-    ellipse(200, 400, 75, 75);
+    
 
 };
 
@@ -80,16 +79,17 @@ var tekenKogel = function(x, y) {
  * @param {number} y y-coördinaat
  */
 var tekenSpeler = function(x, y) {
-  fill("black");
-  ellipse(mouseX, mouseY, 125, 125);
+  fill("white");
+  ellipse(100, 500, 50, 50);
+  ellipse(100, 575, 10, 100);
 };
 
 
 /**
  * Updatet globale variabelen met positie van vijand of tegenspeler
  */
-var beweegVijand = function(x, y) {
-
+var beweegVijand = function() {
+    
 };
 
 
@@ -151,8 +151,8 @@ function setup() {
   createCanvas(1280, 720);
 
   // Kleur de achtergrond blauw, zodat je het kunt zien
-  background('black');
-}
+  background('zwart');
+} 
 
 
 /**
@@ -187,4 +187,41 @@ function draw() {
       }
       break;
   }
+}
+
+// HowtoKeyboard
+// voorbeeld hoe je je toetsenbord in spelletjes kunt gebruiken
+
+var x = 400;
+var y = 200;
+// zie keycode.info voor meer codes van toetsen
+var KEY_LEFT = 37;
+var KEY_RIGHT = 39;
+var KEY_UP = 38;
+var KEY_DOWN = 40;
+function setup() {
+  createCanvas(800,450);
+  background('blue');
+}
+
+function draw() {
+  // kijk welke toetsen zijn ingedrukt en pas x en y aan
+  if (keyIsDown(KEY_LEFT)) {
+    x = x - 2;
+  }
+  if (keyIsDown(KEY_RIGHT)) {
+    x = x + 2;
+  }  
+  if (keyIsDown(KEY_UP)) {
+    y = y - 2;
+  }
+  if (keyIsDown(KEY_DOWN)) {
+    y = y + 2;
+  }
+  // teken scherm
+  background("darkblue"); // wis achtergrond
+  fill("red");
+  ellipse (x, y, 50, 50); // teken speler
+  fill("black");
+  rect (0, 430, 800, 20); // teken speler
 }
